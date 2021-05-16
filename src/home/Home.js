@@ -11,7 +11,9 @@ export default class Home extends Component {
           <h2>My Stuff</h2>
         </header>
 
-        <p><Link to='/stuff'>See the List</Link></p>
+        <p>
+          <Link to='/stuff'>See the List</Link>
+        </p>
       </div>
     );
   }

@@ -5,11 +5,13 @@ import './StuffItem.css';
 export default class StuffItem extends Component {
 
   render() {
-    const { thing } = this.props;
+    const { thing } = this.props.thing;
+   
 
     return (
       <li className="StuffItem">
         <Link to={`/stuff/${thing.id}`}>
+          
           <div>
             <h2>{thing.name}</h2>
             <div>{thing.type}</div>
@@ -18,6 +20,9 @@ export default class StuffItem extends Component {
           </div>
         </Link>
       </li>
+
     );
+
   }
+
 }

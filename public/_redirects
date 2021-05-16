@@ -1,2 +1,2 @@
-/api/*  https://boiling-tundra-15309.herokuapp.com/api/stuff/:splat 200!
+/api/*  https://boiling-tundra-15309.herokuapp.com/api/:splat 
 /*      /index.html   200

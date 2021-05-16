@@ -9,19 +9,21 @@ export default class StuffPage extends Component {
   }
 
   async componentDidMount() {
-    const stuff = await getStuff();
-    if (stuff) {
+    try {
+      const stuff = await getStuff();
       this.setState({ stuff: stuff });
-      console.log(stuff);
-    } else {
-      console.log('no stuff!');
+    }
+    catch (err) {
+      console.log(err.message);
     }
   }
+
 
   render() {
     const { stuff } = this.state;
     return (
       <div className="StuffPage">
+        <h2>List of My Things</h2>
         <StuffList stuff={stuff} />
       </div>
     ); 
